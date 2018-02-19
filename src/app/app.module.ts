@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MapStatisticComponent } from './map-statistic/map-statistic.component';
 import { ChooseMapStatisticComponent } from './choose-map-statistic/choose-map-statistic.component';
+import { OwHeroService } from './ow-hero.service';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { ChooseMapStatisticComponent } from './choose-map-statistic/choose-map-s
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [OwHeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
