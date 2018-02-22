@@ -13,7 +13,7 @@
     </div>
   </div>
 
-  
+
   <!-- here is the table were the hero stats are displayed -->
   <div class="row" class="text-center">
     <div class="col-xs-4">
@@ -22,7 +22,7 @@
         <thead>
           <tr>
             <th>Name</th>
-            
+
             <th>Win Rate</th>
             <th>Pick rate</th>
           </tr>
@@ -30,7 +30,7 @@
         <tbody>
           <tr>
             <td rowspan="2">Shitmada 1</td>
-            
+
             <td>.30</td>
             <td>.40</td>
           </tr>
@@ -46,7 +46,7 @@
         <thead>
           <tr>
             <th>Name</th>
-            
+
             <th>Win Rate</th>
             <th>Pick rate</th>
           </tr>
@@ -54,7 +54,7 @@
         <tbody>
           <tr>
             <td rowspan="2">Shitmada 1</td>
-            
+
             <td>.30</td>
             <td>.40</td>
           </tr>
@@ -71,9 +71,9 @@
   </div>
 
   <!-- printing raw json file -->
-  <h2>{{ owHeroStats | json }}</h2>
+  <h2>{{ owHeroStats[0].offense.wr }}</h2>
 
-  
+
 
 </div>
 

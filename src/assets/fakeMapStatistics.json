@@ -1,24 +1,24 @@
-{
-    "name": {
-        "Soldier 76": {
-            "defense": {
-                "wr": ".36",
-                "pr": ".50"
-            },
-            "offense": {
-                "wr": ".40",
-                "pr": ".55"
-            }
-        },
-        "Roadhog" : {
-            "defense" : {
-                "wr": ".40",
-                "pr": ".55"
-            },
-            "offense": {
-                "wr": ".32",
-                "pr": ".44"
-            }
-        }
+[
+  {
+    "name" : "Soldier 76",
+    "offense" : {
+      "wr" : ".36",
+      "pr" : ".22"
+    },
+    "defense" : {
+      "wr" : ".25",
+      "pr" : ".78"
     }
-}
+  },
+  {
+    "name" : "RoadHog",
+    "offense" : {
+      "wr" : ".36",
+      "pr" : ".22"
+    },
+    "defense" : {
+      "wr" : ".25",
+      "pr" : ".78"
+    }
+  }
+]

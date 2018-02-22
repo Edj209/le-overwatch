@@ -28,7 +28,7 @@ export class MapStatisticComponent implements OnInit {
   // Gets the name of the map.
   // In the future it will grab data from a Mock JSON until an API is ready for it.
   getMapStatistics() {
-    // Gets the name from the url paramEter mapName.
+    // Gets the name from the url parameter mapName.
     this.mapName = this.route.snapshot.paramMap.get('mapName');
     // Makes the first character uppercase.
     this.mapName = this.mapName.charAt(0).toUpperCase() + this.mapName.slice(1);
@@ -41,7 +41,7 @@ export class MapStatisticComponent implements OnInit {
 
   // retrieves the json from the service with the ow hero stats
   getJson() {
-    this.owHeroService.getJson().subscribe(data => this.owHeroStats = {...data});
+    this.owHeroService.getJson().subscribe(data => this.owHeroStats = <OWHeroStats> data);
   }
 
 }
