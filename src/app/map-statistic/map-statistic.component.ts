@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { OwHeroService } from '../ow-hero.service';
+import { OwHeroService, OWHeroStats } from '../ow-hero.service';
+
 
 @Component({
   selector: 'app-map-statistic',
@@ -11,15 +12,17 @@ import { OwHeroService } from '../ow-hero.service';
 export class MapStatisticComponent implements OnInit {
 
   mapName: String;
+  owHeroStats: OWHeroStats;
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location
-    // private owHeroService: OwHeroService
+    private location: Location,
+    private owHeroService: OwHeroService
   ) { }
 
   ngOnInit() {
     this.getMapStatistics();
+    this.getJson();
   }
 
   // Gets the name of the map.
@@ -35,4 +38,10 @@ export class MapStatisticComponent implements OnInit {
   goBack() {
     this.location.back();
   }
+
+  // retrieves the json from the service with the ow hero stats
+  getJson() {
+    this.owHeroService.getJson().subscribe(data => this.owHeroStats = {...data});
+  }
+
 }
