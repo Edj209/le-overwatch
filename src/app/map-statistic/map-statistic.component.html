@@ -15,14 +15,13 @@
 
 
   <!-- here is the table were the hero stats are displayed -->
-  <div class="row" class="text-center">
+  <div class="row" class="text-center" id="offenseTable">
     <div class="col-xs-4">
       <h3>Offense Table</h3>
       <table class="table table-striped">
         <thead>
           <tr>
             <th>Name</th>
-
             <th>Win Rate</th>
             <th>Pick rate</th>
           </tr>
@@ -37,14 +36,13 @@
     </div>
   </div>
 <!-- defense table -->
-  <div class="row" class="text-center">
+  <div class="row" class="text-center" id="defenseTable">
     <div class="col-xs-4">
       <h3>Defense Table</h3>
       <table class="table table-striped">
         <thead>
           <tr>
             <th>Name</th>
-
             <th>Win Rate</th>
             <th>Pick rate</th>
           </tr>
@@ -66,11 +64,6 @@
       <button type="button" class="btn btn-primary" (click)="goBack()"> Go Back </button>
     </div>
   </div>
-
-  <!-- printing raw json file -->
-  <h2>{{ owHeroStats[0].defense.pr }}</h2>
-
-
 
 </div>
 

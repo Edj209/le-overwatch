@@ -1,5 +1,13 @@
 
 
 html{
+    background-color: lightcyan
+}
+
+#offenseTable{
+    background-color: lightcoral
+}
+
+#defenseTable{
     background-color: lightskyblue
 }
