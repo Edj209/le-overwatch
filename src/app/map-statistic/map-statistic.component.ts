@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { OwHeroService, OWHeroStats } from '../ow-hero.service';
+
+import { OwHeroService } from '../ow-hero.service';
+import { OwheroStatsInterface } from '../interfaces/owhero-stats-interface';
 
 
 @Component({
@@ -12,7 +14,7 @@ import { OwHeroService, OWHeroStats } from '../ow-hero.service';
 export class MapStatisticComponent implements OnInit {
 
   mapName: String;
-  owHeroStats: OWHeroStats;
+  owHeroStats: OwheroStatsInterface;
 
   constructor(
     private route: ActivatedRoute,
@@ -41,7 +43,7 @@ export class MapStatisticComponent implements OnInit {
 
   // retrieves the json from the service with the ow hero stats
   getJson() {
-    this.owHeroService.getJson().subscribe(data => this.owHeroStats = <OWHeroStats> data);
+    this.owHeroService.getJson().subscribe(data => this.owHeroStats = <OwheroStatsInterface> data);
   }
 
 }

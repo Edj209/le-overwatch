@@ -2,17 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 
-export interface OWHeroStats {
-  name: string;
-  soldier76: string;
-  roadhog: string;
-
-  defense: string;
-  offense: string;
-
-  wr: string;
-  pr: string;
-}
+import { OwheroStatsInterface } from './interfaces/owhero-stats-interface';
 
 
 @Injectable()
