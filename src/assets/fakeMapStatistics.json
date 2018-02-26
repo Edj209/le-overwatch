@@ -3,22 +3,22 @@
     "name" : "Soldier 76",
     "offense" : {
       "wr" : ".36",
-      "pr" : ".22"
+      "pr" : ".30"
     },
     "defense" : {
-      "wr" : ".25",
-      "pr" : ".78"
+      "wr" : ".30",
+      "pr" : ".50"
     }
   },
   {
-    "name" : "RoadHog",
+    "name" : "Roadhog",
     "offense" : {
-      "wr" : ".36",
-      "pr" : ".22"
+      "wr" : ".40",
+      "pr" : ".33"
     },
     "defense" : {
-      "wr" : ".25",
-      "pr" : ".78"
+      "wr" : ".39",
+      "pr" : ".45"
     }
   }
 ]

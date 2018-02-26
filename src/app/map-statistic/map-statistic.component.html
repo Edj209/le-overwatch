@@ -28,12 +28,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td rowspan="2">Shitmada 1</td>
-
-            <td>.30</td>
-            <td>.40</td>
-          </tr>
+            <tr *ngFor="let item of owHeroStats">
+                <td>{{ item.name }}</td>
+                <td>{{ item.offense.wr }}</td>
+                <td>{{ item.offense.pr }}</td>
         </tbody>
       </table>
     </div>
@@ -52,11 +50,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td rowspan="2">Shitmada 1</td>
-
-            <td>.30</td>
-            <td>.40</td>
+          <tr *ngFor="let item of owHeroStats">
+            <td>{{ item.name }}</td>
+            <td>{{ item.defense.wr }}</td>
+            <td>{{ item.defense.pr }}</td>
           </tr>
         </tbody>
       </table>
@@ -71,7 +68,7 @@
   </div>
 
   <!-- printing raw json file -->
-  <h2>{{ owHeroStats[1].name }}</h2>
+  <h2>{{ owHeroStats[0].defense.pr }}</h2>
 
 
 
