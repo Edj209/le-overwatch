@@ -21,6 +21,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
+            <th> </th>
             <th>Name</th>
             <th>Win Rate</th>
             <th>Pick rate</th>
@@ -28,9 +29,10 @@
         </thead>
         <tbody>
             <tr *ngFor="let item of owHeroStats">
+                <td><img src="../assets/{{ item.name }}.png" class="img-responsive" alt="No pic"></td>
                 <td>{{ item.name }}</td>
-                <td>{{ item.offense.wr }}</td>
-                <td>{{ item.offense.pr }}</td>
+                <td>{{ item.offense.wr | percent }}</td>
+                <td>{{ item.offense.pr | percent }}</td>
         </tbody>
       </table>
     </div>
@@ -42,6 +44,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
+            <th> </th>
             <th>Name</th>
             <th>Win Rate</th>
             <th>Pick rate</th>
@@ -49,9 +52,10 @@
         </thead>
         <tbody>
           <tr *ngFor="let item of owHeroStats">
+            <td><img src="../assets/{{ item.name }}.png" class="img-responsive" alt="No pic"></td>
             <td>{{ item.name }}</td>
-            <td>{{ item.defense.wr }}</td>
-            <td>{{ item.defense.pr }}</td>
+            <td>{{ item.defense.wr | percent }}</td>
+            <td>{{ item.defense.pr | percent }}</td>
           </tr>
         </tbody>
       </table>
