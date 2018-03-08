@@ -1,18 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Observable } from 'rxjs/Observable';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
-import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
+import {RouterTestingModule} from '@angular/router/testing';
+import {HttpClient} from '@angular/common/http';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
-import { MapStatisticComponent } from './map-statistic.component';
-import { OwHeroService } from '../ow-hero.service';
+import {MapStatisticComponent} from './map-statistic.component';
+import {OwHeroService} from '../ow-hero.service';
 
 
-describe('ChooseMapStatisticComponent', () => {
+describe('MapStatisticComponent', () => {
   let component: MapStatisticComponent;
   let fixture: ComponentFixture<MapStatisticComponent>;
   let service: OwHeroService;
@@ -21,8 +21,14 @@ describe('ChooseMapStatisticComponent', () => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, HttpClientTestingModule],
       declarations: [ MapStatisticComponent ],
-      providers: [{ provide: ActivatedRoute, useValue: { params: Observable.of({ path: 'map-statistic/hanamura' }) } }, 
-      Location, OwHeroService, HttpClient
+      providers: [{
+        provide: ActivatedRoute,
+        useValue: {
+          params: Observable.of({ mapName: 'hanamura' })
+        } },
+        Location,
+        OwHeroService,
+        HttpClient
       ]
     })
     .compileComponents();
